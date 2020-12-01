@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Eeop.Views.NotePage" IconImageSource="logo1">
+
+    <ContentPage.ToolbarItems col="*" row="3">
+       
+
+        <ToolbarItem IconImageSource="g" Clicked="OnChange"/>
+        <ToolbarItem IconImageSource="h" Clicked="DeleteNote"/>
+      
+    </ContentPage.ToolbarItems>
+
+
+    <StackLayout  Margin="6,0,0,0">
+
+
+        <Label Text="Заголовок" FontSize="Medium" FontAttributes="Bold"/>
+
+        <Label Text="{Binding Headline}" FontSize="Medium" />
+        <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" WidthRequest="1" Color="#aea898" />
+
+        <Label Text="Записка" FontSize="Medium" FontAttributes="Bold"/>
+        <Label Text="{Binding Note}" FontSize="Large"/>
+        <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" WidthRequest="1" Color="#aea898" />
+
+        <StackLayout Orientation="Horizontal">
+
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

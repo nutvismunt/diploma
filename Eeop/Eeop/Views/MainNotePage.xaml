@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Eeop.Views.MainNotePage" IconImageSource="logo1">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="I" Clicked="CreateNote"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+
+        <ListView x:Name="notesList" ItemSelected="OnItemSelected" Margin="6,0,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Vertical" Spacing="0"  VerticalOptions="Center" >
+
+                                <Label Text="{Binding Headline}" FontSize="Medium"  LineBreakMode="CharacterWrap" />
+
+                               <!-- <Label Text="{Binding Note }"  LineBreakMode="CharacterWrap"/>-->
+                            </StackLayout>
+                            
+                            
+                        </ViewCell.View>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Padding="0"
+                         BackgroundColor="LightGray">
+            <StackLayout Orientation="Horizontal" Padding="0" Spacing="0">
+                <Button ImageSource="a"   HeightRequest="50" MinimumHeightRequest="50" CharacterSpacing="0" Padding="0" Margin="0"
+                            BackgroundColor="#f7f2e4" HorizontalOptions="FillAndExpand" Clicked="ToClients" />
+                <Button ImageSource="f"  HeightRequest="50" MinimumHeightRequest="50" CharacterSpacing="0" Padding="0" Margin="0"
+                            BackgroundColor="#e3dccc" HorizontalOptions="FillAndExpand" />
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Eeop.Views.NoteOnCreate"  Padding="6,0,0,0" IconImageSource="logo1">
+    <ContentPage.ToolbarItems col="*" row="3">
+
+        <ToolbarItem IconImageSource="b"  Clicked="SaveNote"/>
+        <ToolbarItem IconImageSource="h"  Clicked="ComeBack"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Margin="6,0,0,0" x:Name="stackLayout">
+        <Label Text="Заголовок" FontSize="Medium"/>
+        <Entry MaxLength="30" Keyboard="Text" Text="{Binding Headline}" FontFamily="CenturyGothis.ttf#CenturyGothis"/>
+        <Label Text="Заметка" FontSize="Medium"/>
+        <Editor MaxLength="400" Keyboard="Text" Text="{Binding Note}" AutoSize="TextChanges" FontFamily="CenturyGothis.ttf#CenturyGothis" />
+
+      
+    </StackLayout>
+</ContentPage>

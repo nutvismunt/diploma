@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         
+             x:Class="Eeop.Views.ClientOnChange"  >
+    <NavigationPage.TitleView>
+        <Label FontFamily="CenturyGothis.ttf#CenturyGothis" Text="{Binding ClName}"/>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems col="*" row="3">
+        <ToolbarItem IconImageSource="b" Clicked="SaveClientPr" Priority="2" Grid.Row="1"/>
+        <ToolbarItem IconImageSource="h" Clicked="ComeBack" Priority="3" Grid.Row="1"/>
+    </ContentPage.ToolbarItems>
+ 
+
+    <StackLayout Margin="6,0,0,0">
+
+        <Label Text="Имя"/>
+        <Entry MaxLength="30" Keyboard="Text" Text="{Binding ClName}"/>
+
+        
+
+        <Label Text="Телефон"/>
+        <Entry Keyboard="Telephone" Text="{Binding PhoneNum}" MaxLength="25" />
+
+        <Label Text="Дата встречи"/>
+        <DatePicker x:Name="_DpickerCh" Format="dd.MM.yyyy" Date="{ Binding DateCome}" MaximumDate="2100-01-01" MinimumDate="2020-01-01" FontFamily="CenturyGothis.ttf#CenturyGothis"/>
+
+        <Label Text="Время встречи"/>
+        <TimePicker x:Name="_TpickerCh" Format="HH:mm"  Time="{ Binding TimeCome}" FontFamily="CenturyGothis.ttf#CenturyGothis"/>
+
+
+
+        <Label Text="Описание"/>
+        <Editor MaxLength="300" Text="{Binding Description}" AutoSize="TextChanges" FontFamily="CenturyGothis.ttf#CenturyGothis" />
+       
+
+      
+    </StackLayout>
+</ContentPage>

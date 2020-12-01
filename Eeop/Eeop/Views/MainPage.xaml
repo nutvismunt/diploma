@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            mc:Ignorable="d"
+            xmlns:views="clr-namespace:Eeop.Views"
+            x:Class="Eeop.Views.MainPage" IconImageSource="logo1" >
+    <ContentPage.ToolbarItems >
+        <ToolbarItem  Clicked="Codologia"/>
+        <ToolbarItem IconImageSource="c" Clicked="CreateClient"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+
+
+        <ListView   x:Name="clientsList" ItemSelected="OnItemSelected" Margin="10,0,0,0" HasUnevenRows="True" RowHeight="75">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        
+                        <ViewCell.View >
+                          
+                                <StackLayout  Orientation="Vertical"  Spacing="2" >
+
+                                    <Label Text="{Binding ClName}" />
+
+                                    <Label Text="{Binding PhoneNum}" FontSize="Medium" />
+                                </StackLayout>
+                       
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+       
+        <StackLayout Spacing="0" Margin="0" Padding="0"
+                         BackgroundColor="LightGray" >
+            <StackLayout Orientation="Horizontal" Padding="0" Spacing="0">
+               
+                <Button ImageSource="a" HeightRequest="50" MinimumHeightRequest="50" CharacterSpacing="0" Padding="0" Margin="0"
+                            BackgroundColor="#e3dccc" HorizontalOptions="FillAndExpand" />
+                <Button ImageSource="f" HeightRequest="50" MinimumHeightRequest="50" CharacterSpacing="0" Padding="0" Margin="0"
+                            BackgroundColor="#f7f2e4" HorizontalOptions="FillAndExpand" Clicked="ToNotes"/>
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+
+</ContentPage>

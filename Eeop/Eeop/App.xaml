@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Eeop.App">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Global Styles-->
+            <Color x:Key="NavigationPrimary">#e3dccc</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#e3dccc" />
+                <Setter Property="BarTextColor" Value="#ada897" />
+                <Setter Property="BackgroundColor" Value="#faf7f0" />
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily"  Value="CenturyGothis.ttf#CenturyGothis"/>
+                <Setter Property="FontSize" Value="Large"/>
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="FontFamily" Value="CenturyGothis.ttf#CenturyGothis"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>
